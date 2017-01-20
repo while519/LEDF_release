@@ -1,0 +1,12 @@
+#! /bin/csh
+#$ -cwd
+#$ -V
+#$ -M yuwu@liv.ac.uk
+#$ -m abe
+#$ -r y
+#$ -o out.tmp
+#$ -e err.tmp
+module load MATLAB/R2014b
+echo "Start - `date`"
+matlab -r 'main; quit'
+echo "Finish - `date`"
